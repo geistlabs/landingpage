@@ -1,0 +1,19 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Isometric cube -->
+  <!-- Top face -->
+  <path d="M16 6 L24 11 L16 16 L8 11 Z" fill="#000000"/>
+  
+  <!-- Left face -->
+  <path d="M8 11 L16 16 L16 26 L8 21 Z" fill="#666666"/>
+  
+  <!-- Right face -->
+  <path d="M16 16 L24 11 L24 21 L16 26 Z" fill="#333333"/>
+  
+  <!-- Clean edges -->
+  <path d="M16 6 L24 11 L16 16 L8 11 Z M8 11 L8 21 M24 11 L24 21 M16 16 L16 26" 
+        stroke="#000000" stroke-width="0.8" fill="none" stroke-linejoin="round"/>
+  
+  <!-- Highlighted memory block dot -->
+  <circle cx="16" cy="6" r="1.8" fill="#ffffff"/>
+  <circle cx="16" cy="6" r="1.8" stroke="#000000" stroke-width="0.6" fill="none"/>
+</svg>
