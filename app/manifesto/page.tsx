@@ -1,3 +1,33 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'The Geist Manifesto - Privacy-First AI for Everyone',
+  description: 'Learn why Geist AI was built with privacy by design. Discover our principles of local data storage, zero server retention, and GDPR compliance that make AI trustworthy.',
+  keywords: 'AI manifesto, privacy-first AI, data ownership, AI ethics, GDPR AI, secure AI, local AI storage, open source AI, AI privacy principles, trustworthy AI',
+  alternates: {
+    canonical: '/manifesto',
+  },
+  openGraph: {
+    title: 'The Geist Manifesto - Privacy-First AI for Everyone',
+    description: 'Learn why Geist AI was built with privacy by design. Discover our principles of local data storage, zero server retention, and GDPR compliance that make AI trustworthy.',
+    url: '/manifesto',
+    images: [
+      {
+        url: '/thumbnail.png',
+        width: 1200,
+        height: 630,
+        alt: 'The Geist Manifesto - Privacy-First AI for Everyone',
+        type: 'image/png',
+      },
+    ],
+  },
+  twitter: {
+    title: 'The Geist Manifesto - Privacy-First AI for Everyone',
+    description: 'Learn why Geist AI was built with privacy by design. Discover our principles of local data storage, zero server retention, and GDPR compliance that make AI trustworthy.',
+    images: ['/thumbnail.png'],
+  },
+};
+
 export default function Manifesto() {
   return (
     <div className="min-h-screen bg-black px-4 sm:px-6 lg:px-8 py-12 pt-20 lg:pt-12">
