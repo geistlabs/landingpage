@@ -13,23 +13,23 @@ export default function LayoutClient({ children }: { children: React.ReactNode }
 
   if (!mounted) {
     return (
-      <>
+      <div className="min-h-screen flex flex-col">
         <Sidebar isMobileMenuOpen={false} setIsMobileMenuOpen={setIsMobileMenuOpen} />
-        <div className="lg:ml-48">
+        <div className="lg:ml-48 flex-1">
           {children}
         </div>
-      </>
+      </div>
     );
   }
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Sidebar isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} />
-      <div className={`lg:ml-48 transition-transform duration-300 ease-in-out ${
+      <div className={`lg:ml-48 flex-1 transition-transform duration-300 ease-in-out ${
         isMobileMenuOpen ? 'transform translate-x-64 lg:translate-x-0' : ''
       }`}>
         {children}
       </div>
-    </>
+    </div>
   );
 }
