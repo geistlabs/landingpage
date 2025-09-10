@@ -54,7 +54,7 @@ export default function PrivacyPolicyPage() {
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-3">App Store / Platform Data</h3>
                   <p className="leading-relaxed">
-                    Apple (App Store) may collect information related to app downloads, purchases, crash reports, or usage statistics. This is outside of Geist's control and subject to Apple's own privacy policy.
+                    Apple (App Store) may collect information related to app downloads, purchases, crash reports, or usage statistics. This is outside of Geist&apos;s control and subject to Apple&apos;s own privacy policy.
                   </p>
                 </div>
               </div>
@@ -110,7 +110,7 @@ export default function PrivacyPolicyPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-white mb-4">7. Children's Privacy</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">7. Children&apos;s Privacy</h2>
               <div className="space-y-4">
                 <p className="leading-relaxed">
                   Our Services are not directed to, or intended for, children under 13.
@@ -142,7 +142,7 @@ export default function PrivacyPolicyPage() {
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">9. Changes to This Policy</h2>
               <p className="leading-relaxed">
-                We may update this Privacy Policy. If we do, the updated version will always be posted here with the "Last updated" date.
+                We may update this Privacy Policy. If we do, the updated version will always be posted here with the &quot;Last updated&quot; date.
               </p>
             </section>
 
@@ -159,8 +159,8 @@ export default function PrivacyPolicyPage() {
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">✨ Plain English Promise</h2>
               <ul className="list-disc list-inside space-y-2">
-                <li>We don't store your chats.</li>
-                <li>We don't sell your data.</li>
+                <li>We don&apos;t store your chats.</li>
+                <li>We don&apos;t sell your data.</li>
                 <li>We only track basic website visits (Google Analytics) and App Store downloads.</li>
               </ul>
             </section>

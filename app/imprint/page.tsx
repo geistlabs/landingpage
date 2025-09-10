@@ -19,7 +19,7 @@ export default function ImprintPage() {
               <div className="mt-4 space-y-2">
                 <p><strong>Register number:</strong> HRB 236736 B</p>
                 <p><strong>Register court:</strong> Charlottenburg (Berlin)</p>
-                <p><strong>Authorized to represent:</strong> Riccardo Lamanna & Andrew O'Brien</p>
+                <p><strong>Authorized to represent:</strong> Riccardo Lamanna &amp; Andrew O&apos;Brien</p>
               </div>
             </section>
 
@@ -36,7 +36,7 @@ export default function ImprintPage() {
                 </div>
                 
                 <div>
-                  <p><strong>Andrew O'Brien</strong></p>
+                  <p><strong>Andrew O&apos;Brien</strong></p>
                   <p>Managing Director OpenQ Labs GmbH</p>
                   <p>Rheinsberger Str. 76/77,</p>
                   <p>10115 Berlin</p>

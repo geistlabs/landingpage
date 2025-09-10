@@ -18,7 +18,7 @@ export default function ForBusiness() {
             </h2>
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
-                AI is no longer a side experiment—it's the backbone of how
+                AI is no longer a side experiment&mdash;it&apos;s the backbone of how
                 modern organizations communicate, analyze data, and serve
                 customers. But with this power comes unprecedented risk:
               </p>
@@ -142,7 +142,7 @@ export default function ForBusiness() {
             </div>
 
             <p className="text-gray-300 mt-6 text-center font-medium">
-              With Geist, businesses don't have to choose between innovation and
+              With Geist, businesses don&apos;t have to choose between innovation and
               privacy—they get both.
             </p>
           </section>
@@ -169,7 +169,7 @@ export default function ForBusiness() {
                   Web App + RAG
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Use Geist's hosted web app to query internal knowledge
+                  Use Geist&apos;s hosted web app to query internal knowledge
                   securely. Bring your own data with{" "}
                   <strong className="text-white">
                     Retrieval-Augmented Generation (RAG)
@@ -325,7 +325,7 @@ export default function ForBusiness() {
             </h2>
             <div className="space-y-4 text-lg leading-relaxed">
               <p className="text-gray-300">
-                Businesses shouldn't have to gamble with their data to harness
+                Businesses shouldn&apos;t have to gamble with their data to harness
                 AI.
               </p>
               <p className="text-gray-300">

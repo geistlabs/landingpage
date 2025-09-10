@@ -68,7 +68,7 @@ export default function Manifesto() {
                   if AI is going to live beside us in our most personal spaces,
                   it must be designed for privacy at its core.
                 </strong>{" "}
-                That's why Geist exists.
+                That&apos;s why Geist exists.
               </p>
             </div>
           </section>
@@ -87,7 +87,7 @@ export default function Manifesto() {
                   In 2025, thousands of private ChatGPT chats—containing
                   everything from personal confessions to identifying
                   details—were publicly accessible on Google due to a subtle{" "}
-                  <em>"Make this chat discoverable"</em> setting. Conversations
+                  <em>&quot;Make this chat discoverable&quot;</em> setting. Conversations
                   people thought were private turned into search results for the
                   world to see.
                 </p>
@@ -159,7 +159,7 @@ export default function Manifesto() {
             <p className="text-gray-300 mt-6 text-center font-medium">
               These events proved one thing:{" "}
               <strong className="text-white">
-                your data is not truly yours on today's dominant AI platforms.
+                your data is not truly yours on today&apos;s dominant AI platforms.
               </strong>
             </p>
           </section>
@@ -193,7 +193,7 @@ export default function Manifesto() {
                 <p className="text-gray-300 text-sm leading-relaxed">
                   Our rented bare-metal servers in Germany process encrypted
                   requests to compute results. They never store or retain your
-                  data—once processed, it's gone.
+                  data&mdash;once processed, it&apos;s gone.
                 </p>
               </div>
 
@@ -224,9 +224,9 @@ export default function Manifesto() {
                   German infrastructure.
                 </h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  Hosted entirely in Germany under some of the world's strictest
+                  Hosted entirely in Germany under some of the world&apos;s strictest
                   data protection laws (GDPR). Operated by a German company, for
-                  accountability that marketing copy can't replace.
+                  accountability that marketing copy can&apos;t replace.
                 </p>
               </div>
 
@@ -235,7 +235,7 @@ export default function Manifesto() {
                   Long-term memory, done right.
                 </h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  Personalization is useful—but only if it's safe. Geist keeps
+                  Personalization is useful&mdash;but only if it&apos;s safe. Geist keeps
                   long-term AI memory—like vector embeddings—
                   <strong className="text-white">
                     strictly on your device.
@@ -309,7 +309,7 @@ export default function Manifesto() {
                       No sharing features, no hidden checkboxes
                     </td>
                     <td className="border border-gray-800 px-4 py-3">
-                      Accidents like indexed chats can't happen
+                      Accidents like indexed chats can&apos;t happen
                     </td>
                   </tr>
                   <tr>
