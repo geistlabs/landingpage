@@ -1,10 +1,26 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Sidebar from './Sidebar';
 
 export default function LayoutClient({ children }: { children: React.ReactNode }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <>
+        <Sidebar isMobileMenuOpen={false} setIsMobileMenuOpen={setIsMobileMenuOpen} />
+        <div className="lg:ml-48">
+          {children}
+        </div>
+      </>
+    );
+  }
 
   return (
     <>
