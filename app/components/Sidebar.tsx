@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
+import { Widget } from '@typeform/embed-react';
 
 const navigation = [
   { name: 'Manifesto', href: '/manifesto' },
@@ -16,6 +17,7 @@ interface SidebarProps {
 
 export default function Sidebar({ isMobileMenuOpen, setIsMobileMenuOpen }: SidebarProps) {
   const pathname = usePathname();
+  const [showWaitlist, setShowWaitlist] = useState(false);
 
   return (
     <>
@@ -47,12 +49,12 @@ export default function Sidebar({ isMobileMenuOpen, setIsMobileMenuOpen }: Sideb
               Home
             </Link>
           )}
-          <Link
-            href="/"
-            className="block text-sm font-medium transition-colors duration-200 hover:text-white text-white"
+          <button
+            onClick={() => setShowWaitlist(true)}
+            className="block text-sm font-medium transition-colors duration-200 hover:text-white text-white text-left"
           >
             Waitlist
-          </Link>
+          </button>
           {navigation.map((item) => (
             <Link
               key={item.name}
@@ -83,13 +85,15 @@ export default function Sidebar({ isMobileMenuOpen, setIsMobileMenuOpen }: Sideb
               Home
             </Link>
           )}
-          <Link
-            href="/"
-            className="block text-lg font-medium transition-colors duration-200 hover:text-white text-white"
-            onClick={() => setIsMobileMenuOpen(false)}
+          <button
+            onClick={() => {
+              setShowWaitlist(true);
+              setIsMobileMenuOpen(false);
+            }}
+            className="block text-lg font-medium transition-colors duration-200 hover:text-white text-white text-left"
           >
             Waitlist
-          </Link>
+          </button>
           {navigation.map((item) => (
             <Link
               key={item.name}
@@ -113,6 +117,31 @@ export default function Sidebar({ isMobileMenuOpen, setIsMobileMenuOpen }: Sideb
           className="fixed inset-0 bg-black/50 z-30 lg:hidden"
           onClick={() => setIsMobileMenuOpen(false)}
         />
+      )}
+
+      {/* Typeform Modal */}
+      {showWaitlist && (
+        <div 
+          className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) {
+              setShowWaitlist(false);
+            }
+          }}
+        >
+          <div className="bg-white rounded-lg w-full max-w-2xl h-96 relative">
+            <button
+              onClick={() => setShowWaitlist(false)}
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 z-10"
+              aria-label="Close"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <Widget id="owqQl5Ai" style={{ width: '100%', height: '100%' }} className="rounded-lg" />
+          </div>
+        </div>
       )}
     </>
   );

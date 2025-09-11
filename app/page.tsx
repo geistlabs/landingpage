@@ -2,9 +2,11 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { Widget } from '@typeform/embed-react';
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
+  const [showWaitlist, setShowWaitlist] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -19,8 +21,8 @@ export default function Home() {
       <div className="flex-1 flex items-center justify-center">
         <main className="text-center max-w-4xl mx-auto">
           <div className="block sm:hidden mb-6">
-            <Link
-              href="/"
+            <button
+              onClick={() => setShowWaitlist(true)}
               className="relative inline-block"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-300 via-blue-200 to-slate-200 bg-[length:200%_200%] rounded-full animate-gradient-xy opacity-80 blur-sm"></div>
@@ -29,7 +31,7 @@ export default function Home() {
                   Join Waitlist
                 </span>
               </div>
-            </Link>
+            </button>
           </div>
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-medium text-white mb-4 sm:mb-6 tracking-tight">
             Geist AI
@@ -93,6 +95,31 @@ export default function Home() {
           </a>
         </div>
       </div>
+
+      {/* Typeform Modal */}
+      {showWaitlist && (
+        <div 
+          className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) {
+              setShowWaitlist(false);
+            }
+          }}
+        >
+          <div className="bg-white rounded-lg w-full max-w-2xl h-96 relative">
+            <button
+              onClick={() => setShowWaitlist(false)}
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 z-10"
+              aria-label="Close"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <Widget id="owqQl5Ai" style={{ width: '100%', height: '100%' }} className="rounded-lg" />
+          </div>
+        </div>
+      )}
 
     </div>
   );
