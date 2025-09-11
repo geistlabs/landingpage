@@ -1,30 +1,34 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'The Geist Manifesto - Privacy-First AI for Everyone',
-  description: 'Learn why Geist AI was built with privacy by design. Discover our principles of local data storage, zero server retention, and GDPR compliance that make AI trustworthy.',
-  keywords: 'AI manifesto, privacy-first AI, data ownership, AI ethics, GDPR AI, secure AI, local AI storage, open source AI, AI privacy principles, trustworthy AI',
+  title: "The Geist Manifesto - Privacy-First AI for Everyone",
+  description:
+    "Learn why Geist AI was built with privacy by design. Discover our principles of local data storage, zero server retention, and GDPR compliance that make AI trustworthy.",
+  keywords:
+    "AI manifesto, privacy-first AI, data ownership, AI ethics, GDPR AI, secure AI, local AI storage, open source AI, AI privacy principles, trustworthy AI",
   alternates: {
-    canonical: '/manifesto',
+    canonical: "/manifesto",
   },
   openGraph: {
-    title: 'The Geist Manifesto - Privacy-First AI for Everyone',
-    description: 'Learn why Geist AI was built with privacy by design. Discover our principles of local data storage, zero server retention, and GDPR compliance that make AI trustworthy.',
-    url: '/manifesto',
+    title: "The Geist Manifesto - Privacy-First AI for Everyone",
+    description:
+      "Learn why Geist AI was built with privacy by design. Discover our principles of local data storage, zero server retention, and GDPR compliance that make AI trustworthy.",
+    url: "/manifesto",
     images: [
       {
-        url: '/thumbnail.png',
+        url: "/thumbnail.png",
         width: 1200,
         height: 630,
-        alt: 'The Geist Manifesto - Privacy-First AI for Everyone',
-        type: 'image/png',
+        alt: "The Geist Manifesto - Privacy-First AI for Everyone",
+        type: "image/png",
       },
     ],
   },
   twitter: {
-    title: 'The Geist Manifesto - Privacy-First AI for Everyone',
-    description: 'Learn why Geist AI was built with privacy by design. Discover our principles of local data storage, zero server retention, and GDPR compliance that make AI trustworthy.',
-    images: ['/thumbnail.png'],
+    title: "The Geist Manifesto - Privacy-First AI for Everyone",
+    description:
+      "Learn why Geist AI was built with privacy by design. Discover our principles of local data storage, zero server retention, and GDPR compliance that make AI trustworthy.",
+    images: ["/thumbnail.png"],
   },
 };
 
@@ -50,8 +54,8 @@ export default function Manifesto() {
               <p>
                 Artificial Intelligence is becoming as common as the smartphone
                 itself. Millions of people now turn to AI assistants for help
-                with deeply personal matters—mental health struggles, private
-                finances, family questions, intimate reflections.
+                with deeply personal matters like mental health struggles,
+                private finances, family questions, intimate reflections.
               </p>
               <p>
                 But trust in mainstream AI is eroding. Companies talk about
@@ -59,7 +63,7 @@ export default function Manifesto() {
                 <strong className="text-white">
                   your most sensitive data at risk
                 </strong>
-                —from accidental leaks to legal orders that override your right
+                from accidental leaks to legal orders that override your right
                 to deletion.
               </p>
               <p>
@@ -75,7 +79,7 @@ export default function Manifesto() {
 
           <section>
             <h2 className="text-2xl sm:text-3xl font-medium text-white mb-6">
-              2. When Trust Was Broken — Recent Consumer Breaches
+              2. When Trust Was Broken - Recent Consumer Breaches
             </h2>
 
             <div className="space-y-8">
@@ -84,12 +88,12 @@ export default function Manifesto() {
                   ChatGPT Conversations Accidentally Indexed by Google
                 </h3>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  In 2025, thousands of private ChatGPT chats—containing
-                  everything from personal confessions to identifying
-                  details—were publicly accessible on Google due to a subtle{" "}
-                  <em>&quot;Make this chat discoverable&quot;</em> setting. Conversations
-                  people thought were private turned into search results for the
-                  world to see.
+                  In 2025, thousands of private ChatGPT chats containing
+                  everything from personal confessions to identifying details
+                  were publicly accessible on Google due to a subtle{" "}
+                  <em>&quot;Make this chat discoverable&quot;</em> setting.
+                  Conversations people thought were private turned into search
+                  results for the world to see.
                 </p>
                 <p className="text-sm text-gray-400">
                   Sources:{" "}
@@ -125,7 +129,7 @@ export default function Manifesto() {
                   <strong className="text-white">
                     retain all ChatGPT logs indefinitely
                   </strong>{" "}
-                  as part of ongoing litigation—even logs that users had
+                  as part of ongoing litigation - even logs that users had
                   deleted. The court ruling forced OpenAI to ignore its own
                   deletion policies, effectively stripping users of control over
                   their data.
@@ -159,7 +163,8 @@ export default function Manifesto() {
             <p className="text-gray-300 mt-6 text-center font-medium">
               These events proved one thing:{" "}
               <strong className="text-white">
-                your data is not truly yours on today&apos;s dominant AI platforms.
+                your data is not truly yours on today&apos;s dominant AI
+                platforms.
               </strong>
             </p>
           </section>
@@ -182,7 +187,7 @@ export default function Manifesto() {
                 </h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
                   Your chats, memory, and embeddings stay on your device.
-                  Deleting means gone—no shadow copies, no backups.
+                  Deleting means gone -no shadow copies, no backups.
                 </p>
               </div>
 
@@ -193,7 +198,7 @@ export default function Manifesto() {
                 <p className="text-gray-300 text-sm leading-relaxed">
                   Our rented bare-metal servers in Germany process encrypted
                   requests to compute results. They never store or retain your
-                  data&mdash;once processed, it&apos;s gone.
+                  data once processed, it&apos;s gone.
                 </p>
               </div>
 
@@ -203,7 +208,7 @@ export default function Manifesto() {
                 </h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
                   Desktop already has good local AI options. But most people use
-                  AI privately on their phones—where privacy protections are
+                  AI privately on their phones where privacy protections are
                   weakest. Geist brings uncompromising privacy to the device you
                   use most.
                 </p>
@@ -214,7 +219,7 @@ export default function Manifesto() {
                   Open source, top to bottom.
                 </h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  Every component—client, server, inference stack—is open and
+                  Every component client, server, inference stack is open and
                   auditable. No black boxes, no hidden data pipelines.
                 </p>
               </div>
@@ -224,9 +229,10 @@ export default function Manifesto() {
                   German infrastructure.
                 </h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  Hosted entirely in Germany under some of the world&apos;s strictest
-                  data protection laws (GDPR). Operated by a German company, for
-                  accountability that marketing copy can&apos;t replace.
+                  Hosted entirely in Germany under some of the world&apos;s
+                  strictest data protection laws (GDPR). Operated by a German
+                  company, for accountability that marketing copy can&apos;t
+                  replace.
                 </p>
               </div>
 
@@ -235,8 +241,8 @@ export default function Manifesto() {
                   Long-term memory, done right.
                 </h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  Personalization is useful&mdash;but only if it&apos;s safe. Geist keeps
-                  long-term AI memory—like vector embeddings—
+                  Personalization is useful but only if it&apos;s safe. Geist
+                  keeps long-term AI memory-like vector embeddings
                   <strong className="text-white">
                     strictly on your device.
                   </strong>{" "}

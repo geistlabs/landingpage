@@ -18,7 +18,7 @@ export default function ForBusiness() {
             </h2>
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
-                AI is no longer a side experiment&mdash;it&apos;s the backbone of how
+                AI is no longer a side experiment it&apos;s the backbone of how
                 modern organizations communicate, analyze data, and serve
                 customers. But with this power comes unprecedented risk:
               </p>
@@ -64,7 +64,7 @@ export default function ForBusiness() {
 
           <section>
             <h2 className="text-2xl sm:text-3xl font-medium text-white mb-6">
-              2. Flexible Deployment — Your Infrastructure, Your Rules
+              2. Flexible Deployment - Your Infrastructure, Your Rules
             </h2>
             <p className="text-gray-300 mb-8 leading-relaxed">
               Every organization has unique compliance and IT requirements.
@@ -142,8 +142,8 @@ export default function ForBusiness() {
             </div>
 
             <p className="text-gray-300 mt-6 text-center font-medium">
-              With Geist, businesses don&apos;t have to choose between innovation and
-              privacy—they get both.
+              With Geist, businesses don&apos;t have to choose between
+              innovation and privacy they get both.
             </p>
           </section>
 
@@ -183,8 +183,8 @@ export default function ForBusiness() {
                   Browser Sidebar Extension
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Instant AI assistance in the browser—summarize, draft, or
-                  answer with corporate knowledge—without data leaking to third
+                  Instant AI assistance in the browser - summarize, draft, or
+                  answer with corporate knowledge without data leaking to third
                   parties.
                 </p>
               </div>
@@ -248,21 +248,20 @@ export default function ForBusiness() {
 
               <div className="bg-gray-900/30 border border-gray-800 rounded-xl p-6">
                 <h3 className="text-lg font-medium text-white mb-3">
-                  Inference-only servers — no retention, no shadow copies
+                  Inference-only servers - no retention, no shadow copies
                 </h3>
               </div>
 
               <div className="bg-gray-900/30 border border-gray-800 rounded-xl p-6">
                 <h3 className="text-lg font-medium text-white mb-3">
-                  German or on-premise jurisdiction — GDPR and local compliance
+                  German or on-premise jurisdiction, GDPR and local compliance
                   guaranteed
                 </h3>
               </div>
 
               <div className="bg-gray-900/30 border border-gray-800 rounded-xl p-6">
                 <h3 className="text-lg font-medium text-white mb-3">
-                  Transparent and auditable — Geist is open source at every
-                  layer
+                  Transparent and auditable, Geist is open source at every layer
                 </h3>
               </div>
             </div>
@@ -325,8 +324,8 @@ export default function ForBusiness() {
             </h2>
             <div className="space-y-4 text-lg leading-relaxed">
               <p className="text-gray-300">
-                Businesses shouldn&apos;t have to gamble with their data to harness
-                AI.
+                Businesses shouldn&apos;t have to gamble with their data to
+                harness AI.
               </p>
               <p className="text-gray-300">
                 With Geist, you get the productivity of AI{" "}
