@@ -15,7 +15,7 @@ export default function LayoutClient({ children }: { children: React.ReactNode }
     return (
       <div className="min-h-screen flex flex-col">
         <Sidebar isMobileMenuOpen={false} setIsMobileMenuOpen={setIsMobileMenuOpen} />
-        <div className="lg:ml-48 flex-1">
+        <div className="lg:ml-48 flex-1 grid-bg">
           {children}
         </div>
       </div>
@@ -25,7 +25,7 @@ export default function LayoutClient({ children }: { children: React.ReactNode }
   return (
     <div className="min-h-screen flex flex-col">
       <Sidebar isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} />
-      <div className={`lg:ml-48 flex-1 transition-transform duration-300 ease-in-out ${
+      <div className={`lg:ml-48 flex-1 grid-bg transition-transform duration-300 ease-in-out ${
         isMobileMenuOpen ? 'transform translate-x-64 lg:translate-x-0' : ''
       }`}>
         {children}

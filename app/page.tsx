@@ -17,7 +17,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-black flex flex-col px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex flex-col px-4 sm:px-6 lg:px-8">
       <div className="flex-1 flex items-center justify-center">
         <main className="text-center max-w-4xl mx-auto">
           <div className="block sm:hidden mb-6">

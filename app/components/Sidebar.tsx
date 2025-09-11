@@ -39,7 +39,7 @@ export default function Sidebar({ isMobileMenuOpen, setIsMobileMenuOpen }: Sideb
       </div>
 
       {/* Desktop sidebar */}
-      <div className="fixed left-0 top-0 h-full w-48 flex items-center justify-center hidden lg:flex">
+      <div className="fixed left-0 top-0 h-full w-48 flex items-center justify-center hidden lg:flex grid-bg">
         <nav className="space-y-4">
           {pathname !== '/' && (
             <Link
@@ -72,7 +72,7 @@ export default function Sidebar({ isMobileMenuOpen, setIsMobileMenuOpen }: Sideb
       </div>
 
       {/* Mobile menu sidebar */}
-      <div className={`fixed top-0 left-0 h-full w-64 bg-black flex items-center justify-center lg:hidden transform transition-transform duration-300 ease-in-out z-40 ${
+      <div className={`fixed top-0 left-0 h-full w-64 grid-bg flex items-center justify-center lg:hidden transform transition-transform duration-300 ease-in-out z-40 ${
         isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
       }`}>
         <nav className="space-y-6">
