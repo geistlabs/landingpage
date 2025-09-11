@@ -1,27 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 export default function Home() {
-  const [showTypeform, setShowTypeform] = useState(false);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
-
-  useEffect(() => {
-    if (showTypeform) {
-      const script = document.createElement("script");
-      script.src = "//embed.typeform.com/next/embed.js";
-      script.async = true;
-      document.head.appendChild(script);
-
-      return () => {
-        document.head.removeChild(script);
-      };
-    }
-  }, [showTypeform]);
 
   if (!mounted) {
     return null;
@@ -32,8 +19,8 @@ export default function Home() {
       <div className="flex-1 flex items-center justify-center">
         <main className="text-center max-w-4xl mx-auto">
           <div className="block sm:hidden mb-6">
-            <button
-              onClick={() => setShowTypeform(true)}
+            <Link
+              href="/"
               className="relative inline-block"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-300 via-blue-200 to-slate-200 bg-[length:200%_200%] rounded-full animate-gradient-xy opacity-80 blur-sm"></div>
@@ -42,7 +29,7 @@ export default function Home() {
                   Join Waitlist
                 </span>
               </div>
-            </button>
+            </Link>
           </div>
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-medium text-white mb-4 sm:mb-6 tracking-tight">
             Geist AI
@@ -107,41 +94,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Typeform Modal */}
-      {showTypeform && (
-        <>
-          <div
-            className="fixed inset-0 bg-black/80 z-50"
-            onClick={() => setShowTypeform(false)}
-          />
-          <div className="fixed top-8 left-8 right-8 bottom-8 max-w-4xl max-h-[90vh] mx-auto z-50 bg-white rounded-lg overflow-hidden">
-            <div className="absolute top-4 right-4 z-10">
-              <button
-                onClick={() => setShowTypeform(false)}
-                className="w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:text-gray-800 transition-colors"
-              >
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div
-              data-tf-live="01K4TM96YA9Y11JRFY4HTEKQ41"
-              className="w-full h-full"
-            ></div>
-          </div>
-        </>
-      )}
     </div>
   );
 }

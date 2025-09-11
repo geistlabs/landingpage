@@ -16,25 +16,6 @@ interface SidebarProps {
 
 export default function Sidebar({ isMobileMenuOpen, setIsMobileMenuOpen }: SidebarProps) {
   const pathname = usePathname();
-  const [showTypeform, setShowTypeform] = useState(false);
-
-  useEffect(() => {
-    if (showTypeform) {
-      const script = document.createElement('script');
-      script.src = '//embed.typeform.com/next/embed.js';
-      script.async = true;
-      document.head.appendChild(script);
-      
-      return () => {
-        document.head.removeChild(script);
-      };
-    }
-  }, [showTypeform]);
-
-  const openWaitlist = () => {
-    setShowTypeform(true);
-    setIsMobileMenuOpen(false);
-  };
 
   return (
     <>
@@ -66,12 +47,12 @@ export default function Sidebar({ isMobileMenuOpen, setIsMobileMenuOpen }: Sideb
               Home
             </Link>
           )}
-          <button
-            onClick={openWaitlist}
+          <Link
+            href="/"
             className="block text-sm font-medium transition-colors duration-200 hover:text-white text-white"
           >
             Waitlist
-          </button>
+          </Link>
           {navigation.map((item) => (
             <Link
               key={item.name}
@@ -102,12 +83,13 @@ export default function Sidebar({ isMobileMenuOpen, setIsMobileMenuOpen }: Sideb
               Home
             </Link>
           )}
-          <button
-            onClick={openWaitlist}
+          <Link
+            href="/"
             className="block text-lg font-medium transition-colors duration-200 hover:text-white text-white"
+            onClick={() => setIsMobileMenuOpen(false)}
           >
             Waitlist
-          </button>
+          </Link>
           {navigation.map((item) => (
             <Link
               key={item.name}
@@ -131,32 +113,6 @@ export default function Sidebar({ isMobileMenuOpen, setIsMobileMenuOpen }: Sideb
           className="fixed inset-0 bg-black/50 z-30 lg:hidden"
           onClick={() => setIsMobileMenuOpen(false)}
         />
-      )}
-      
-      {/* Typeform Modal */}
-      {showTypeform && (
-        <>
-          <div 
-            className="fixed inset-0 bg-black/80 z-50"
-            onClick={() => setShowTypeform(false)}
-          />
-          <div className="fixed top-8 left-8 right-8 bottom-8 max-w-4xl max-h-[90vh] mx-auto z-50 bg-white rounded-lg overflow-hidden">
-            <div className="absolute top-4 right-4 z-10">
-              <button
-                onClick={() => setShowTypeform(false)}
-                className="w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:text-gray-800 transition-colors"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-            <div 
-              data-tf-live="01K4TM96YA9Y11JRFY4HTEKQ41"
-              className="w-full h-full"
-            ></div>
-          </div>
-        </>
       )}
     </>
   );
