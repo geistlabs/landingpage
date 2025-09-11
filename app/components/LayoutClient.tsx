@@ -12,14 +12,7 @@ export default function LayoutClient({ children }: { children: React.ReactNode }
   }, []);
 
   if (!mounted) {
-    return (
-      <div className="min-h-screen flex flex-col">
-        <Sidebar isMobileMenuOpen={false} setIsMobileMenuOpen={setIsMobileMenuOpen} />
-        <div className="lg:ml-48 flex-1 grid-bg">
-          {children}
-        </div>
-      </div>
-    );
+    return null;
   }
 
   return (
