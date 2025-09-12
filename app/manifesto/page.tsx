@@ -242,7 +242,7 @@ export default function Manifesto() {
                 </h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
                   Personalization is useful but only if it&apos;s safe. Geist
-                  keeps long-term AI memory-like vector embeddings
+                  keeps long-term AI memory-like vector embeddings{" "}
                   <strong className="text-white">
                     strictly on your device.
                   </strong>{" "}
