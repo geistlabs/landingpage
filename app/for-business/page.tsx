@@ -1,4 +1,10 @@
+"use client";
+
+import { useState } from "react";
+
 export default function ForBusiness() {
+  const [showCalendly, setShowCalendly] = useState(false);
+
   return (
     <div className="min-h-screen bg-black px-4 sm:px-6 lg:px-8 py-12 pt-20 lg:pt-12">
       <main className="max-w-4xl mx-auto">
@@ -9,6 +15,15 @@ export default function ForBusiness() {
           <p className="text-xl sm:text-2xl text-gray-400 font-medium">
             Enterprise-Grade AI, Privacy-First by Design
           </p>
+        </div>
+
+        <div className="text-center mb-16">
+          <button 
+            onClick={() => setShowCalendly(true)}
+            className="bg-white text-black px-8 py-4 rounded-2xl font-medium text-lg hover:bg-gray-200 transition-all duration-300"
+          >
+            Talk to sales
+          </button>
         </div>
 
         <div className="prose prose-lg max-w-none text-gray-300 space-y-12">
@@ -318,6 +333,15 @@ export default function ForBusiness() {
             </div>
           </section>
 
+          <div className="text-center mb-16">
+            <button 
+              onClick={() => setShowCalendly(true)}
+              className="bg-white text-black px-8 py-4 rounded-2xl font-medium text-lg hover:bg-gray-200 transition-all duration-300"
+            >
+              Talk to sales
+            </button>
+          </div>
+
           <section className="text-center">
             <h2 className="text-2xl sm:text-3xl font-medium text-white mb-6">
               7. Our Belief
@@ -344,6 +368,37 @@ export default function ForBusiness() {
           </section>
         </div>
       </main>
+
+      {/* Calendly Modal */}
+      {showCalendly && (
+        <div 
+          className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) {
+              setShowCalendly(false);
+            }
+          }}
+        >
+          <div className="bg-white rounded-lg w-full max-w-4xl h-[80vh] relative">
+            <button
+              onClick={() => setShowCalendly(false)}
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 z-10 bg-white rounded-full p-2 shadow-sm"
+              aria-label="Close"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <iframe 
+              src="https://calendly.com/rickkdev/geist"
+              width="100%" 
+              height="100%"
+              frameBorder="0"
+              className="rounded-lg"
+            ></iframe>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
