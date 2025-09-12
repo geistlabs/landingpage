@@ -62,7 +62,7 @@ export default function Manifesto() {
                 privacy, yet their systems are architected in ways that put{" "}
                 <strong className="text-white">
                   your most sensitive data at risk
-                </strong>
+                </strong>{" "}
                 from accidental leaks to legal orders that override your right
                 to deletion.
               </p>
